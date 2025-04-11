@@ -9,7 +9,7 @@ import {ToolbarService} from '../../shared/components/layout/toolbar/services/to
   styleUrl: './tournament-bracket-generator.component.scss'
 })
 export class TournamentBracketGeneratorComponent extends AppToolbarTitle {
-  toolbarTitle = "Tournament Bracket Generator";
+  toolbarTitle = "Apps / Tournament Bracket Generator";
 
   constructor(toolbarService: ToolbarService) {
     super(toolbarService);

@@ -4,3 +4,8 @@
 
   border-radius: 0 1.5rem 1.5rem 0;
 }
+
+.active-link {
+  color: var(--p-menu-item-focus-color);
+  background: var(--p-menu-item-focus-background);
+}

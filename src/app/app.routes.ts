@@ -1,34 +1,44 @@
 import {Routes} from '@angular/router';
 
-const featureRoutes: Routes = [
+export const routes: Routes = [
   {
-    path: 'bracket',
-    loadChildren: () =>
-      import('./features/tournament-bracket-generator/routes').then(
-        (m) => m.routes
-      )
+    path: 'apps',
+    children: [
+      {
+        path: 'bracket',
+        loadChildren: () =>
+          import('./features/tournament-bracket-generator/routes').then(
+            (m) => m.routes
+          )
+      } ,
+      {
+        path: 'sudoku',
+        loadChildren: () =>
+          import('./features/sudoku/routes').then(
+            (m) => m.routes
+          )
+      } ,
+      {
+        path: 'secret-santa',
+        loadChildren: () =>
+          import('./features/secret-santa/routes').then(
+            (m) => m.routes
+          )
+      } ,
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'bracket'
+      }
+    ]
   },
   {
     path: '',
-    redirectTo: 'bracket',
+    redirectTo: 'apps',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'bracket'
-  }
-]
-
-export const routes: Routes = [
-  {
-    path: ':lang',
-    children: featureRoutes
+    redirectTo: 'apps'
   },
-  {
-    path: '',
-    redirectTo: 'ka',
-    pathMatch: 'full'
-  },
-  {path: '**', redirectTo: 'ka'}
-
 ];
