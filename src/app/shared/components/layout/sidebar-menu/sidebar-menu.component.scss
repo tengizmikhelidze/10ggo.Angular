@@ -3,6 +3,12 @@
   height: 100%;
 
   border-radius: 0 1.5rem 1.5rem 0;
+
+  padding: 1rem;
+
+  .p-menu-submenu-label {
+    padding-left: 0;
+  }
 }
 
 .active-link {

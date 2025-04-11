@@ -1,6 +1,10 @@
 <div class="sidebar-menu h-full w-full">
   <p-menu [model]="menuItems" class="layout-sidebar-menu">
 
+    <ng-template #start>
+      <h1 class="text-2xl">10GGO</h1>
+    </ng-template>
+
     <ng-template #item let-item>
       <ng-container *ngIf="item.route; else elseBlock">
         <a [routerLink]="item.route" routerLinkActive="active-link" class="p-menu-item-link">
