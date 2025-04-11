@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use "styles/fonts/fonts" as fonts;
 @use "primeicons/primeicons.css" as primeicons;
 @use "tailwindcss" as tailwind;
 @use "styles/theming/theme" as theme;
