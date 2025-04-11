@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {AppToolbarTitle} from '../../shared/components/toolbar/base-toolbar.component';
-import {ToolbarService} from '../../shared/components/toolbar/services/toolbar.service';
+import {AppToolbarTitle} from '../../shared/components/layout/toolbar/base-toolbar.component';
+import {ToolbarService} from '../../shared/components/layout/toolbar/services/toolbar.service';
 
 @Component({
   selector: 'app-tournament-bracket-generator',

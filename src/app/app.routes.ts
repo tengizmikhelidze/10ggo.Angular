@@ -2,7 +2,7 @@ import {Routes} from '@angular/router';
 
 const featureRoutes: Routes = [
   {
-    path: 'home',
+    path: 'bracket',
     loadChildren: () =>
       import('./features/tournament-bracket-generator/routes').then(
         (m) => m.routes
@@ -10,12 +10,12 @@ const featureRoutes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'bracket',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'bracket'
   }
 ]
 
