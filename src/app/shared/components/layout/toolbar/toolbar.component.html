@@ -1,7 +1,11 @@
 <p-toolbar class="layout-toolbar">
 
   <ng-template #start>
-    <div class="p-toolbar-group-left">
+    <div class="p-toolbar-group-left flex justify-start items-center">
+      <div class="sidebar-shrink">
+        <i class="pi pi-angle-left w-[35px] h-[35px]"></i>
+      </div>
+      <div class="separator w-[1px] border-l-1 border-(--p-content-hover-background) self-stretch"></div>
       <h1 class="text-2xl">{{ title() }}</h1>
     </div>
   </ng-template>

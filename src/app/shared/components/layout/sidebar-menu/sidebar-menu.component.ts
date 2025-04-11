@@ -33,7 +33,7 @@ export class SidebarMenuComponent {
         {
           label: 'Secret Santa',
           icon: 'pi pi-gift',
-          route: '/apps/secret-sante'
+          route: '/apps/secret-santa'
         }
       ]
     },

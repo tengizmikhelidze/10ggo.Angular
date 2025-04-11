@@ -1,4 +1,27 @@
 ::ng-deep .layout-toolbar .p-toolbar{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.separator {
+  margin: 0 1rem;
+}
+
+.sidebar-shrink {
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.125rem;
+    border-radius: var(--p-content-border-radius);
+    cursor: pointer;
+
+    &:hover {
+      background: var(--p-content-hover-background);
+    }
+  }
 }
