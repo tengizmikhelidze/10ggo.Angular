@@ -1,13 +1,14 @@
-import {OnDestroy, OnInit} from '@angular/core';
+import {Directive, OnDestroy, OnInit} from '@angular/core';
 import {ToolbarService} from './services/toolbar.service';
 
+@Directive()
 export abstract class AppToolbarTitle implements OnInit, OnDestroy {
-  abstract pageTitle: string;
+  abstract toolbarTitle: string;
 
-  constructor(protected toolbarService: ToolbarService) {}
+  protected constructor(protected toolbarService: ToolbarService) {}
 
   ngOnInit(): void {
-    this.toolbarService.setTitle(this.pageTitle);
+    this.toolbarService.setTitle(this.toolbarTitle);
   }
 
   ngOnDestroy(): void {
