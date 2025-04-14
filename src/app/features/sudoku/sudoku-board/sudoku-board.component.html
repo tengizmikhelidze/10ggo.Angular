@@ -1,15 +1,35 @@
-<div class="board grid grid-rows-9">
-  @for (row of board(); track row; let rowIndex = $index) {
-    <div class="board__row board__row--{{rowIndex+1}} grid grid-cols-9">
-      @for (column of row; track column; let columnIndex = $index) {
-        <div class="board__column board__column--{{columnIndex+1}} w-[40px] h-[40px] flex justify-center items-center">
-          <p-inputNumber class="sudoku-input-number"
-                         [readonly]="!!column.value"
-                         [min]="1"
-                         [max]="9" maxlength="1"
-                         [ngModel]="column.value"></p-inputNumber>
+<div class="sudoku flex justify-center items-center">
+  <div class="content">
+    <div class="board">
+
+      <div class="board__header w-[100%] flex justify-between">
+        <div class="board__header__box mistakes">
+          <div>
+            <span>Mistakes</span>
+          </div>
+          <div>
+
+          </div>
         </div>
-      }
+        <div class="board__header__box pause"></div>
+      </div>
+
+      <div class="board__grid grid grid-rows-9">
+        @for (row of board; track row; let rowIndex = $index) {
+          <div class="board__row board__row--{{rowIndex+1}} grid grid-cols-9">
+            @for (column of row; track column; let columnIndex = $index) {
+              <div class="board__column board__column--{{columnIndex+1}} w-[40px] h-[40px] flex justify-center items-center">
+                <p-inputNumber class="sudoku-input-number"
+                               [readonly]="!!column.value"
+                               [min]="1"
+                               [max]="9" maxlength="1"
+                               [ngModel]="column.value"></p-inputNumber>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
     </div>
-  }
+  </div>
 </div>
