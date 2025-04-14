@@ -1,3 +1,3 @@
 export const LocalstorageKeys = {
-  theme: 'theme'
+  theme: 'theme',
 }

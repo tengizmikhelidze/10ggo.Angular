@@ -1,0 +1,49 @@
+::ng-deep .sudoku-input-number {
+  width: 100%;
+  height: 100%;
+
+  .p-inputtext {
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.board__column {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+
+  &--1 {
+    border-left: 1px solid black;
+  }
+}
+
+.board__row {
+  .board__column {
+    &--3, &--6 {
+      border-right: 2px solid black;
+    }
+  }
+
+  &--1 {
+    .board__column {
+      border-top: 1px solid black;
+    }
+  }
+
+  &--3, &--6 {
+    .board__column {
+      border-bottom: 2px solid black;
+    }
+  }
+}

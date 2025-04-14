@@ -1,0 +1,15 @@
+<div class="board grid grid-rows-9">
+  @for (row of board(); track row; let rowIndex = $index) {
+    <div class="board__row board__row--{{rowIndex+1}} grid grid-cols-9">
+      @for (column of row; track column; let columnIndex = $index) {
+        <div class="board__column board__column--{{columnIndex+1}} w-[40px] h-[40px] flex justify-center items-center">
+          <p-inputNumber class="sudoku-input-number"
+                         [readonly]="!!column.value"
+                         [min]="1"
+                         [max]="9" maxlength="1"
+                         [ngModel]="column.value"></p-inputNumber>
+        </div>
+      }
+    </div>
+  }
+</div>
