@@ -1,4 +1,8 @@
-<div class="layout h-dvh grid grid-cols-[240px_1fr]">
+<div class="layout h-dvh grid grid-cols-[240px_1fr]"
+     [ngClass]="{
+     'grid-cols-[240px_1fr]': !shrinkSidebarService.shrunk(),
+     'grid-cols-[auto_1fr]': shrinkSidebarService.shrunk()
+     }">
   <div class="sidebar">
     <div class="sidebar--wrapper h-full">
       <app-sidebar-menu></app-sidebar-menu>

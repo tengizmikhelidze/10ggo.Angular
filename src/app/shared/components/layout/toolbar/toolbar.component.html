@@ -3,7 +3,11 @@
   <ng-template #start>
     <div class="p-toolbar-group-left flex justify-start items-center">
       <div class="sidebar-shrink">
-        <i class="pi pi-angle-left w-[35px] h-[35px]"></i>
+        @if (!shrinkSidebarService.shrunk()) {
+          <i class="pi pi-angle-left w-[35px] h-[35px]" (click)="shrinkSidebarService.toggle()"></i>
+        } @else {
+          <i class="pi pi-angle-right w-[35px] h-[35px]" (click)="shrinkSidebarService.toggle()"></i>
+        }
       </div>
       <div class="separator w-[1px] border-l-1 border-(--p-content-hover-background) self-stretch"></div>
       <h1 class="text-2xl">{{ title() }}</h1>
